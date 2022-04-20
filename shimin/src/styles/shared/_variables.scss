@@ -1,0 +1,26 @@
+$headerFontSize: 18px !default;
+$defaultFontSize: 16px !default;
+$mediumFontSize: 13px !default;
+$smallFontSize: 11px !default;
+
+$minWidthDesktop: 980px !default;
+$maxWidthDesktop: 1024px !default;
+$minWidthTablet: 480px !default;
+$maxWidthTablet: 768px !default;
+$minWidthMobile: 320px !default;
+$maxWidthMobile: 600px !default;
+
+/** Header Font inlcludes H1, H2, H3 */
+$header-font-size: $headerFontSize !default;
+
+/** Default Font includes Body, P */
+$default-font-size: $defaultFontSize !default;
+
+/** Medium Font */
+$medium-font-size: $mediumFontSize !default;
+
+/** Small Font */
+$small-font-size: $smallFontSize !default;
+
+/** Spacing **/
+$common-space: 20px !default;

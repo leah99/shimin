@@ -1,0 +1,288 @@
+@mixin text-size-adjust($size) {
+    -webkit-text-size-adjust: $size;
+    -ms-text-size-adjust: $size;
+  }
+  
+  // Curvy edges
+  @mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+    -o-border-radius: $radius;
+  }
+  
+  //appearance
+  @mixin appearance($value) {
+    -webkit-appearance: $value;
+    -moz-appearance: $value;
+    appearance: $value;
+  }
+  
+  // Background Size (cover, 100%)
+  @mixin bg-size($size) {
+    -webkit-background-size: $size;
+    -moz-background-size: $size;
+    -o-background-size: $size;
+    background-size: $size;
+  }
+  
+  // Box Sizing (border-box, content-box, initial)
+  @mixin box-sizing($sizing) {
+    -webkit-box-sizing: $sizing;
+    -moz-box-sizing: $sizing;
+    box-sizing: $sizing;
+  }
+  
+  // Box shadow
+  @mixin box-shadow($value) {
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+  }
+  
+  // User select
+  @mixin user-select() {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  
+  // Order of element (which element you want to go first)
+  @mixin element-order($value) {
+    -webkit-order: $value;
+    order: $value;
+  }
+  
+  // animation
+  @mixin animation($value) {
+    -webkit-animation: $value;
+    -moz-animation: $value;
+    -ms-animation: $value;
+    -o-animation: $value;
+    animation: $value;
+  }
+
+  @mixin transition($value) {
+    -webkit-transition: $value;
+    -moz-transition: $value;
+    -o-transition: $value;
+    -ms-transition: $value;
+    transition: $value;
+  }
+  
+  //e.g. @include calc(width, "25% - 1em");
+  @mixin calc($property, $expression) {
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+  }
+  
+  // Calculate line-height
+  @mixin line-height($font-size, $line-height) {
+    line-height: $line-height / $font-size;
+  }
+  
+  // Media Queries
+  @mixin desktop {
+    @media only screen and (max-width: $maxWidthDesktop) {
+      @content;
+    }
+  }
+  
+  @mixin bigDesktop {
+    @media only screen and (min-width: $bigDesktop) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media only screen and (max-width: $maxWidthTablet) {
+      @content;
+    }
+  }
+  
+  @mixin mobile {
+    @media only screen and (max-width: $maxWidthMobile) {
+      @content;
+    }
+  }
+
+  // Mobile
+  @media (min-width: 320px) {
+    :root {
+      --size-divisor: 3;
+    }
+    h1 {
+      font-size: 60px;
+    }
+    h2 {
+      font-size: 30px;
+    }
+    h3 {
+      font-size: 18px;
+    }
+    h4 {
+      font-size: 16px;
+    }
+    body {
+      font-size: 16px;
+    }
+    ul, li {
+      font-size: 18px;
+    }
+  }
+  
+  //Tablets--small
+  @media (min-width: 576px) {
+    :root {
+      --size-divisor: 2;
+    }
+    h1 {
+      font-size: 80px;
+    }
+    h2 {
+      font-size: 40px;
+    }
+    h3 {
+      font-size: 22px;
+    }
+    h4 {
+      font-size: 16px;
+    }
+    body {
+      font-size: 16px;
+    }
+    ul, li {
+      font-size: 18px;
+    }
+  }
+
+  //Tablets--big
+  @media (min-width: 768px) {
+    :root {
+      --size-divisor: 1.5;
+    }
+    h1 {
+      font-size: 90px;
+    }
+    h2 {
+      font-size: 50px;
+    }
+    h3 {
+      font-size: 25px;
+    }
+    h4 {
+      font-size: 18px;
+    }
+    body {
+      font-size: 18px;
+    }
+    ul, li {
+      font-size: 20px;
+    }
+  }
+
+  //Desktop
+  @media (min-width: 992px) { 
+    :root {
+      --size-divisor: 1.2;
+    }
+    h1 {
+      font-size: 110px;
+    }
+    h2 {
+      font-size: 60px;
+    }
+    h3 {
+      font-size: 30px;
+    }
+    h4 {
+      font-size: 20px;
+    }
+    body {
+      font-size: 20px;
+    }
+    ul, li {
+      font-size: 22px;
+    }
+  }
+
+  //Desktop--large
+  @media (min-width: 1200px) { 
+    :root {
+      --size-divisor: 1;
+    }
+    h1 {
+      font-size: 120px;
+    }
+    h2 {
+      font-size: 70px;
+    }
+    h3 {
+      font-size: 35px;
+    }
+    h4 {
+      font-size: 20px;
+    }
+    body {
+      font-size: 20px;
+    }
+    ul, li {
+      font-size: 22px;
+    }
+  }
+  
+  @mixin scaleTranslateY($sVal, $tVal) {
+    transform: scale($sVal) translateY($tVal);
+    -ms-transform: scale($sVal) translateY($tVal);
+    -moz-transform: scale($sVal) translateY($tVal);
+    -o-transform: scale($sVal) translateY($tVal);
+    -webkit-transform: scale($sVal) translateY($tVal);
+  }
+  
+  @mixin displayFlex() {
+    display: -webkit-box !important; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box !important; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox !important; /* TWEENER - IE 10 */
+    display: -webkit-flex !important; /* NEW - Chrome */
+    display: flex !important; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  }
+  
+  // Keyframe
+  @mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+    @-ms-keyframes #{$name} {
+      @content;
+    }
+    @-o-keyframes #{$name} {
+      @content;
+    }
+    @keyframes #{$name} {
+      @content;
+    }
+  }
+  
+  @mixin inputDefault() {
+    position: relative;
+    border: solid 1px $lightGrey;
+    background: $white;
+    border-radius: $text-inputpadding-border-radius;
+    // width: 100%;
+    height: $text-inputpadding-height;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: $text-inputpadding-right;
+    padding-left: $text-inputpadding-left;
+    outline: none;
+    &:focus {
+      border: solid 1px $blue;
+    }
+  }  

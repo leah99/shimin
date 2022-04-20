@@ -1,0 +1,32 @@
+$black: #101010;
+$white: #FFFFFF;
+$offWhite: #FFFEFB;
+$cream: #EBD9CA;
+$dullOrange: #DD8E58;
+$dullOrange: #E4A981;
+$softOrange: #DF9B6D;
+$yellow: #FEC06B;
+$dullGreen: #A2A182;
+
+
+/** Primary Color */
+$color-primary: $dullOrange !default;
+
+/** Secondary Color*/
+$color-secondary: $yellow !default;
+
+/** Tertiary Color*/
+$color-tertiary: $dullGreen !default;
+
+/** Background Color*/
+$color-body: $cream !default;
+
+/** Primary Label Color */
+$color-plabel: $dullOrange !default;
+$color-plabel-inverted: $offWhite !default;
+
+/** Secondary Label Color */
+$color-slabel: $softOrange !default;
+
+/** Tertiary Label Color */
+$color-tlabel: $dullGreen !default;

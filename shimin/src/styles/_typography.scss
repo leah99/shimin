@@ -1,0 +1,17 @@
+@import '../styles/shared/variables';
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Contrail+One&family=Oswald:wght@400;500;600;700&display=swap');
+
+h1, h2, h3{
+    font-family: 'Contrail One', cursive;
+}
+
+h4 { font-family: 'Oswald', sans-serif; }
+
+body,
+p {
+	font-family: 'Archivo', sans-serif;;
+}
+
+.signature {
+    font-family: 'Dawning of a New Day', cursive;
+}
