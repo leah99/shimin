@@ -1,15 +1,15 @@
 @import '../styles/shared/variables';
-@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Contrail+One&family=Oswald:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Share+Tech&display=swap');
 
 h1, h2, h3{
-    font-family: 'Contrail One', cursive;
+    font-family: 'Share Tech', sans-serif;
 }
 
-h4 { font-family: 'Oswald', sans-serif; }
+h4 { font-family: 'Abel', sans-serif; }
 
 body,
 p {
-	font-family: 'Archivo', sans-serif;;
+	font-family: 'Abel', sans-serif;
 }
 
 .signature {
