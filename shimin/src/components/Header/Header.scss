@@ -1,12 +1,15 @@
 @import '../../styles/shared/index.scss';
 
 $mobile-max-width: 960px;
-$padding: 20px;
+$padding: 1em;
 
-$navbar-menu-margin: 50px;
-$navbar-menu-margin-mobile: 30px;
+$navbar-menu-margin: 2.5em;
+$navbar-menu-margin-mobile: 1.5em;
 $text-underline-height: 2px;
 $text-underline-offset: -3px;
+
+$text-font-family: 'Share Tech', sans-serif;
+$text-font-size: 1em;
 
 $hamburger-width: 25px;
 $hamburger-height: 3px;
@@ -20,6 +23,7 @@ $primary-color-overlay: rgba(0, 0, 0, 0.50);
 
 .navbar {
   &--show {
+    background: $color-body;
     position: sticky;
     top: 0;
     z-index: 5;
@@ -29,14 +33,16 @@ $primary-color-overlay: rgba(0, 0, 0, 0.50);
     &--close {
       @include displayFlex();
       justify-content: flex-end;
-      padding: $padding*2;
+      padding: $padding;
+      @include box-shadow(10px 1px 0px 0px $darkGrayBlue);
 
       li {
         list-style: none;
         display: inline-block; //underline animation
         position: relative; //underline animation
         color: $color-plabel;
-        font-family: 'Share Tech', sans-serif;
+        font-family: $text-font-family;
+        font-size: $text-font-size;
         text-decoration: none;
 
         /* Underline Animation */
@@ -53,7 +59,6 @@ $primary-color-overlay: rgba(0, 0, 0, 0.50);
           transition: transform 0.25s ease-out;
         }
 
-  
         &:hover {
           color: $color-primary;
           cursor: pointer;
@@ -104,6 +109,10 @@ $primary-color-overlay: rgba(0, 0, 0, 0.50);
 
 @media only screen and (max-width: $mobile-max-width) {
   .navbar {
+    &__menu--close {
+      @include box-shadow(unset);
+    }
+
     &__menu--open {
       position: fixed;
       left: 0;
@@ -129,6 +138,7 @@ $primary-color-overlay: rgba(0, 0, 0, 0.50);
         li {
           list-style: none;
           text-decoration: none;
+          font-size: $text-font-size;
           
           div {
             padding: $navbar-menu-margin-mobile;
@@ -152,7 +162,7 @@ $primary-color-overlay: rgba(0, 0, 0, 0.50);
     /** Default */
     &__hamburger--close {
       position: absolute;
-      top: $padding*1.5;
+      top: $padding;
       right: $padding;
       z-index: 4;
     }
@@ -160,7 +170,7 @@ $primary-color-overlay: rgba(0, 0, 0, 0.50);
     /** Menu is opened */
     &__hamburger--open {
       position: absolute;
-      top: $padding*1.5;
+      top: $padding;
       right: $padding;
       z-index: 4;
     }
