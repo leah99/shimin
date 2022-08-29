@@ -1,0 +1,38 @@
+@import '../../styles/shared/index.scss';
+
+$padding: 1em;
+$border-bottom: 0.5em;
+
+$font-family-label: 'Share Tech', sans-serif;
+
+.tab {
+    &__label {
+        list-style-type: none;
+        @include displayFlex();
+		flex-direction: row;
+		position: relative;
+		cursor: pointer;
+        justify-content: space-around;
+        font-family: $font-family-label;
+
+        li {
+            flex: 1; //stretch child to fill cross-axis
+            text-align: center;
+            padding: $padding;
+        }
+
+        &__selected {
+            border-bottom: $border-bottom solid $color-primary;
+        }
+
+        &__unselected {
+            border-bottom: $border-bottom solid $color-primary;
+            opacity: 0.5;
+
+            &:hover {
+                border-bottom: $border-bottom solid $color-primary;
+                opacity: 0.7;
+            }
+        }
+    }
+}
