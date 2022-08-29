@@ -1,0 +1,23 @@
+@import '../../styles/shared/index.scss';
+
+$height: 3em;
+$size: 1em;
+$margin-right: 0.2em;
+
+.footer {
+    @include displayFlex();
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: $color-primary;
+    height: $height;
+    font-size: 1em;
+    
+    &__copyright {
+        width: $size;
+        height: $size;
+        margin-right: $margin-right;
+    }
+
+}
