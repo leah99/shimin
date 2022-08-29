@@ -1,0 +1,16 @@
+@import '../../styles/shared/index.scss';
+
+.highlight {
+    width: fit-content;
+    background-image: linear-gradient(to right, rgba($color-plabel-inverted, 0) 50%, $color-plabel-inverted 50%);
+    background-position: -0% 0;
+    background-size: 200% auto;
+    color: $color-plabel-inverted;
+    transition: background-position 0.5s ease-out;
+
+    &:hover {
+        color: $color-plabel;
+        background-position: -100% 0;
+        width: fit-content;
+    }
+}
