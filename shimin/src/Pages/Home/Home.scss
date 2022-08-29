@@ -76,21 +76,58 @@ $icon-size-mobile: 2em;
         flex: 1 1 0;
         #cloud-one {
             offset-path: path("m 0 0 h 50");
+
+            /** Firefox */
+            @-moz-document url-prefix() {
+                offset-path: path("m -330 -170 h 50");
+            }
+
+            /** Safari */
+            @media not all and (min-resolution:.001dpcm) {
+                @supports (-webkit-appearance:none) {
+                    offset-path: path("m -330 -170 h 50");
+                }
+            }
+            
             animation: move 2300ms infinite alternate ease-in-out;
         }
 
         #cloud-two {
             offset-path: path("m 0 0 h 80");
+            @-moz-document url-prefix() {
+                offset-path: path("m -330 -170 h 80");
+            }
+            @media not all and (min-resolution:.001dpcm) {
+                @supports (-webkit-appearance:none) {
+                    offset-path: path("m -330 -170 h 80");
+                }
+            }
             animation: move 2100ms infinite alternate ease-in-out;
         }
 
         #hand, #pen {
             offset-path: path("m 0 0 h 4");
+            @-moz-document url-prefix() {
+                offset-path: path("m -330 -170 h 4");
+            }
+            @media not all and (min-resolution:.001dpcm) {
+                @supports (-webkit-appearance:none) {
+                    offset-path: path("m -330 -170 h 4");
+                }
+            }
             animation: move 1000ms infinite alternate ease-in-out;
         }
 
         #arm { 
             offset-path: path("m 0 0 h 2");
+            @-moz-document url-prefix() {
+                offset-path: path("m -330 -170 h 2");
+            }
+            @media not all and (min-resolution:.001dpcm) {
+                @supports (-webkit-appearance:none) {
+                    offset-path: path("m -330 -170 h 2");
+                }
+            }
             animation: move 1000ms infinite alternate ease-in-out;
         }
 
