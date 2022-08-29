@@ -1,0 +1,56 @@
+@import '../../styles/shared/index.scss';
+
+.card {
+    color: transparent;
+    white-space: pre-line;
+    text-align: justify;
+    font-size: 1.2em;
+    align-self: center;
+    position: relative;
+
+    // Disable highlight
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+
+    &::before, &::after {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        padding: 0.5em;
+        border: 0.2em solid $color-primary;
+        transition: all .25s ease-out;
+    }
+
+    &::before {
+        content: attr(text-ref);
+        white-space: pre-line;
+        color: $color-plabel;
+        background-color: $color-primary;
+        top: -1em;
+        left: -1em;
+    }
+
+    &::after {
+        content: "";
+        bottom: -1.5em;
+        right: -1.5em;
+        z-index: -2;
+    }
+
+    &:hover {
+        &::before {
+            top: 0.1em;
+            left: 0.1em;
+        }
+        
+        &::after {
+            bottom: 0.1em;
+            right: 0.1em;
+        }
+    }
+}
