@@ -1,0 +1,94 @@
+@import '../../styles/shared/index.scss';
+
+$mobile-max-width: 960px;
+$tablet-min-width: 480px;
+$tablet-max-width: 1024px;
+
+$font-size-header-mobile: 3em;
+$font-size-paragraph-mobile: 1em;
+$icon-size-mobile: 2em;
+
+$font-size-header-tablet: 6em;
+$font-size-paragraph-tablet: 2em;
+$icon-size-tablet: 2.5em;
+
+$font-size-header-desktop: 5em;
+$font-size-paragraph-desktop: 2em;
+$font-family-header: 'Share Tech', sans-serif;
+$icon-size-desktop: 2em;
+$margin: 1em;
+
+.contact {
+    @include displayFlex();
+    flex-direction: column;
+    text-align: center;
+
+    &__header {
+        font-size: $font-size-header-desktop;
+        font-family: $font-family-header;
+        color: $color-primary;
+        align-self: center;
+    }
+
+    &__paragraph {
+        white-space: normal;
+        font-size: $font-size-paragraph-desktop;
+    }
+
+    &__icon {
+        @include displayFlex();
+        flex-direction: row;
+        align-self: center;
+        margin-top: $margin;
+
+        &__linkedIn, &__email {
+            width: $icon-size-desktop;
+            height: $icon-size-desktop;
+
+            &:hover {
+                transform: scale(1.2);
+                filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+            }
+        }
+    
+        a {
+            + a {
+                margin-left: $margin;
+            }
+        }
+    }
+
+    @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+        &__header {
+            font-size: $font-size-header-tablet !important;
+        }
+    
+        &__paragraph {
+            font-size: $font-size-paragraph-tablet !important;
+        }
+
+        &__icon{
+            &__linkedIn, &__email {
+                width: $icon-size-tablet !important;
+                height: $icon-size-tablet !important;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $mobile-max-width) {
+        &__header {
+            font-size: $font-size-header-mobile;
+        }
+    
+        &__paragraph {
+            font-size: $font-size-paragraph-mobile;
+        }
+
+        &__icon{
+            &__linkedIn, &__email {
+                width: $icon-size-mobile;
+                height: $icon-size-mobile;
+            }
+        }
+    }
+}
