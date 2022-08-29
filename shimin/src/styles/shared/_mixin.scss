@@ -12,7 +12,7 @@
     -o-border-radius: $radius;
   }
   
-  //appearance
+  // Appearance
   @mixin appearance($value) {
     -webkit-appearance: $value;
     -moz-appearance: $value;
@@ -56,7 +56,7 @@
     order: $value;
   }
   
-  // animation
+  // Animation
   @mixin animation($value) {
     -webkit-animation: $value;
     -moz-animation: $value;
@@ -86,36 +86,42 @@
   
   // Media Queries
   @mixin desktop {
-    @media only screen and (max-width: $maxWidthDesktop) {
+    @media only screen and (min-width: 1025px) and (max-width: 1280px) {
       @content;
     }
   }
   
   @mixin bigDesktop {
-    @media only screen and (min-width: $bigDesktop) {
+    @media only screen and (min-width: 1281px) {
       @content;
     }
   }
   
   @mixin tablet {
-    @media only screen and (max-width: $maxWidthTablet) {
+    @media only screen and (min-width: 481px) and (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @mixin tablet-portrait {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
       @content;
     }
   }
   
   @mixin mobile {
-    @media only screen and (max-width: $maxWidthMobile) {
+    @media only screen and (max-width: 480px) {
       @content;
     }
   }
 
   // Mobile
-  @media (min-width: 320px) {
+  @media (max-width: 480px) {
     :root {
       --size-divisor: 3;
     }
     h1 {
-      font-size: 60px;
+      font-size: 110px;
     }
     h2 {
       font-size: 30px;
@@ -133,39 +139,14 @@
       font-size: 18px;
     }
   }
-  
-  //Tablets--small
-  @media (min-width: 576px) {
-    :root {
-      --size-divisor: 2;
-    }
-    h1 {
-      font-size: 80px;
-    }
-    h2 {
-      font-size: 40px;
-    }
-    h3 {
-      font-size: 22px;
-    }
-    h4 {
-      font-size: 16px;
-    }
-    body {
-      font-size: 16px;
-    }
-    ul, li {
-      font-size: 18px;
-    }
-  }
 
-  //Tablets--big
-  @media (min-width: 768px) {
+  // Tablets
+  @media (min-width: 481px) and (max-width: 767px) {
     :root {
       --size-divisor: 1.5;
     }
     h1 {
-      font-size: 90px;
+      font-size: 180px;
     }
     h2 {
       font-size: 50px;
@@ -184,13 +165,38 @@
     }
   }
 
-  //Desktop
-  @media (min-width: 992px) { 
+  // Tablets--portrait
+  @media (min-width: 768px) and (max-width: 1024px) {
     :root {
-      --size-divisor: 1.2;
+      --size-divisor: 1.5;
     }
     h1 {
-      font-size: 110px;
+      font-size: 180px;
+    }
+    h2 {
+      font-size: 50px;
+    }
+    h3 {
+      font-size: 25px;
+    }
+    h4 {
+      font-size: 18px;
+    }
+    body {
+      font-size: 18px;
+    }
+    ul, li {
+      font-size: 20px;
+    }
+  }
+
+  // Desktop
+  @media (min-width: 1025px) and (max-width: 1280px) { 
+    :root {
+      --size-divisor: 1;
+    }
+    h1 {
+      font-size: 120px;
     }
     h2 {
       font-size: 60px;
@@ -210,7 +216,7 @@
   }
 
   //Desktop--large
-  @media (min-width: 1200px) { 
+  @media (min-width: 1281px) { 
     :root {
       --size-divisor: 1;
     }
