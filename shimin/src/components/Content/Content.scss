@@ -1,0 +1,53 @@
+@import '../../styles/shared/index.scss';
+
+$font-size-header: 2em;
+$font-size-paragraph: 1em;
+$font-family-header: 'Share Tech', sans-serif;
+
+$margin-top-header: 0.3em;
+$margin-top-paragraph: 0.5em;
+$list-indent: 0.5em;
+
+.content {
+    @include displayFlex();
+    flex-direction: column;
+
+    &__header {
+        @include displayFlex();
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: $font-size-header;
+        $font-family: $font-family-header;
+        margin-top: $margin-top-header;
+
+        &__link {
+            font-weight: bold;
+
+            a::after {
+                left: 20px;
+                bottom: -5px;
+                width: calc(100% - 15px);
+                height: calc(100% - 20px);
+            }
+        }
+    }
+
+    &__paragraph {
+        @include displayFlex();
+        flex-direction: column;
+        font-size: $font-size-paragraph;
+
+        &__container{
+            margin-top: $margin-top-paragraph;
+        }
+
+        &__ul {
+            margin-top: $margin-top-paragraph;
+            &__li {
+                list-style-position: inside;
+                list-style-type: square;
+                margin-left: $list-indent;
+            }
+        }
+    }
+}
