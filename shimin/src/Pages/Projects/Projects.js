@@ -1,11 +1,11 @@
 import React from 'react';
-
+import PropTypes from "prop-types";
 import {Tab, Content} from '../../components'
 import './Projects.scss';
 
-const Projects = () => {
+const Projects = (customClass) => {
     return (
-        <div className="projects">
+        <div className={`projects ${customClass}`}>
             <Tab menu={["Internship", "Final Year Project", "Designer"]} activeIndex={0}>
                 <Content
                     header="Front-End Developer "
@@ -32,5 +32,14 @@ const Projects = () => {
         </div>
     )
 }
+
+Projects.propTypes = {
+	/** Custom styling class */
+    customClass: PropTypes.string,
+};
+
+Projects.defaultProps = {
+	customClass: "",
+};
 
 export default Projects
