@@ -1,0 +1,50 @@
+@import '../../styles/shared/index.scss';
+
+$mobile-max-width: 960px;
+
+.about {
+    @include displayFlex();
+    flex-direction: row;
+    
+    &__container-left {
+        width: auto;
+        height: auto;
+        flex: 1 1 0;
+  
+        #left-arm, #left-sleeve {
+            translate: -5% -30%;
+            transform-origin: 50% 100%;
+            animation: rotate 5s 0s infinite;
+
+            @keyframes rotate{
+                0% {
+                    transform:rotate(0deg);
+                }
+                50% {
+                    transform:rotate(8deg);
+                }
+                100% {
+                    transform:rotate(0deg);
+                }
+            }
+        }
+    }
+
+    &__container-right {
+        flex: 1 1 0;
+        margin-left: 3em;
+        margin-right: 2em;
+    }
+
+    @media only screen and (max-width: $mobile-max-width) {
+        flex-direction: column;
+        
+        &__container-left {
+            max-height: 15em !important; //SVG images rendering with huge space above and below IOS
+        }
+
+        &__container-right {
+            margin: 2em 2em 0 2em;
+        }
+    }
+}
