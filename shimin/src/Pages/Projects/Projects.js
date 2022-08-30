@@ -19,7 +19,7 @@ const Projects = (customClass) => {
                     link="https://www.youtube.com/watch?v=aIDAQbuQy_w"
                     linkTitle="@Final Year Project"
                     paragraph={["My final year project aimed to improve the existing implementation of human-computer dialogue systems and explore the usage of emojis in them to further enhance human-computer interaction.",
-                                "In addition to the popular Generative Pre-trained Transformer 3 (GPT-3) model, the approach taken in my study further fine-tuned that model to obtain more desirable responses. It was followed by the generation of emojis in a dialogue system’s response to amplify a more human-like response.Lastly, it was combined to create a dialogue system capable of performing dialogues that mimics a human. Overall, the study has shown promising results to enhance human-computer interaction."]}
+                                "In addition to utilising the popular Generative Pre-trained Transformer 3 (GPT-3) model, the approach taken in my study further fine-tuned that model to obtain more desirable responses. It was followed by the generation of emojis in a dialogue system’s response to amplify a more human-like response. Lastly, these two improvements combined to create a dialogue system capable of performing dialogues that mimics a human. Overall, the study has shown promising results to enhance human-computer interaction."]}
                 />
                 <Content
                     header="Designer "
