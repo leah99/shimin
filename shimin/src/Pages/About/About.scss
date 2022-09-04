@@ -12,10 +12,9 @@ $mobile-max-width: 960px;
         flex: 1 1 0;
   
         #left-arm, #left-sleeve {
-            translate: -5% -30%;
+            translate: -50px -178px;
             transform-origin: 50% 100%;
             animation: rotate 5s 0s infinite;
-            opacity: 1;
 
             @keyframes rotate {
                 0% {
