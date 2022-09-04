@@ -15,6 +15,7 @@ $mobile-max-width: 960px;
             translate: -5% -30%;
             transform-origin: 50% 100%;
             animation: rotate 5s 0s infinite;
+            opacity: 1;
 
             @keyframes rotate {
                 0% {
