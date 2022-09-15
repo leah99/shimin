@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/shimin/static/css/main.f83d0c0f.css",
+    "main.css": "/shimin/static/css/main.20753b0d.css",
     "main.js": "/shimin/static/js/main.d3b36ce6.js",
     "static/js/787.c6be3d89.chunk.js": "/shimin/static/js/787.c6be3d89.chunk.js",
     "static/media/woman-working.svg": "/shimin/static/media/woman-working.c0020e03fd8f49592e236fd19d1d66ba.svg",
@@ -9,12 +9,12 @@
     "static/media/linkedIn.svg": "/shimin/static/media/linkedIn.a3b2981f921dc3094bde357f2334b29e.svg",
     "index.html": "/shimin/index.html",
     "static/media/copyright.svg": "/shimin/static/media/copyright.240fb33f93d916d680420d422cd975e4.svg",
-    "main.f83d0c0f.css.map": "/shimin/static/css/main.f83d0c0f.css.map",
+    "main.20753b0d.css.map": "/shimin/static/css/main.20753b0d.css.map",
     "main.d3b36ce6.js.map": "/shimin/static/js/main.d3b36ce6.js.map",
     "787.c6be3d89.chunk.js.map": "/shimin/static/js/787.c6be3d89.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f83d0c0f.css",
+    "static/css/main.20753b0d.css",
     "static/js/main.d3b36ce6.js"
   ]
 }
