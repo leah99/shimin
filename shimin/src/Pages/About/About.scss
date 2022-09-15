@@ -7,24 +7,27 @@ $mobile-max-width: 960px;
     flex-direction: row;
     
     &__container-left {
-        width: auto;
-        height: auto;
         flex: 1 1 0;
-  
-        #left-arm, #left-sleeve {
-            translate: -50px -178px;
-            transform-origin: 50% 100%;
-            animation: rotate 5s 0s infinite;
 
-            @keyframes rotate {
-                0% {
-                    transform: translate(0%, 0%) rotate(0deg);
-                }
-                50% {
-                    transform: translate(0%, 0%) rotate(8deg);
-                }
-                100% {
-                    transform: translate(0%, 0%) rotate(0deg);
+        &__woman {
+            width: 100%;
+            height: auto;
+            
+            #left-arm, #left-sleeve {
+                translate: -50px -178px;
+                transform-origin: 50% 100%;
+                animation: rotate 5s 0s infinite;
+
+                @keyframes rotate {
+                    0% {
+                        transform: translate(0%, 0%) rotate(0deg);
+                    }
+                    50% {
+                        transform: translate(0%, 0%) rotate(8deg);
+                    }
+                    100% {
+                        transform: translate(0%, 0%) rotate(0deg);
+                    }
                 }
             }
         }
@@ -34,6 +37,7 @@ $mobile-max-width: 960px;
         flex: 1 1 0;
         margin-left: 3em;
         margin-right: 2em;
+        align-self: center;
     }
 
     @media only screen and (max-width: $mobile-max-width) {

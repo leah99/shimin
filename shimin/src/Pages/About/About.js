@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import {ReactComponent as Woman} from "../../assets/woman-wave.svg"
+import {ReactComponent as Woman} from "../../assets/woman-wave.svg";
 import { Card } from "../../components";
+import AOS from "aos";
 import "./About.scss";
   
 const About = ({customClass, paragraph}) => {
+	useEffect(() => {
+    	AOS.init({duration : 800});
+		AOS.refresh();
+    }, [])
+	
 	return (
         <div className={`about ${customClass}`}>
-            <Woman className="about__container-left" />
-            <Card customClass="about__container-right" paragraph={paragraph} />
+			<div className="about__container-left" data-aos="fade-right">
+				<Woman className="about__container-left__woman" />
+			</div>
+			<div className="about__container-right" data-aos="fade-left">
+				<Card paragraph={paragraph} />
+			</div>
         </div>
 	);
 };
