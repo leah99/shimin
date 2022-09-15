@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import PropTypes from 'prop-types';
 import { TextSwapping } from '../../components';
-import {ReactComponent as LinkedIn} from "../../assets/linkedIn.svg"
-import {ReactComponent as Email} from "../../assets/email.svg"
-import {ReactComponent as WomanWorking} from "../../assets/woman-working.svg"
+import {ReactComponent as LinkedIn} from "../../assets/linkedIn.svg";
+import {ReactComponent as Email} from "../../assets/email.svg";
+import {ReactComponent as WomanWorking} from "../../assets/woman-working.svg";
+import AOS from "aos";
 import './Home.scss';
 
 const Home = ({ titleGreeting, titlePronoun, titleColor, subtitle, linkedInLink, emailAddress}) => {
+    useEffect(() => {
+        AOS.init({duration : 800});
+        AOS.refresh();
+      }, [])
+
     return (
         <div className="home">
-            <div className="home__container-left">
+            <div className="home__container-left"  data-aos="fade-right" data-aos-mirror="true">
                 <div className="home__container-left__title">
                     <span className="home__container-left__title__greeting">{titleGreeting}</span>
                     <div className="home__container-left__title__container">
@@ -23,7 +29,7 @@ const Home = ({ titleGreeting, titlePronoun, titleColor, subtitle, linkedInLink,
                     <a href={emailAddress}><Email className="home__container-left__icons__email" /></a>
                 </div>
             </div>
-            <WomanWorking className="home__container-right" />
+            <div className="home__container-right" data-aos="fade-left" data-aos-mirror="true"><WomanWorking /></div>
         </div>
     )
 }
